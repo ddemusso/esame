@@ -1,9 +1,13 @@
 {
+  "homepage": "http://ddemusso.github.io/esame",
   "name": "esame-web",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "start": "node backend/index.js"
   },
   "keywords": [],
@@ -18,5 +22,8 @@
     "mongoose": "^7.3.0",
     "socket.io": "^4.7.0"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
